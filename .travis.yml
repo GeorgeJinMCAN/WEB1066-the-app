@@ -2,9 +2,9 @@ language: java
 jdk: oraclejdk9
 install:
   - "pip install -r requirements.txt"
-  - "./gradlew clean jar"
 
 script:
+  - "./gradlew clean jar"
   - echo "testing coming soon"
   # Run ANSIBLE checks
   # - ANSIBLE0008: Disabled for use of sudo warnings - to address
