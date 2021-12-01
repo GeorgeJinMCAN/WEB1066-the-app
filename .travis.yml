@@ -1,6 +1,12 @@
 dist: trusty
 language: java
 jdk: oraclejdk9
+
+before_install:
+    - pwd
+    - ls -la
+    - chmod +x /.gradlew
+
 script:
   - ./gradlew clean jar
   - echo "testing coming soon"
