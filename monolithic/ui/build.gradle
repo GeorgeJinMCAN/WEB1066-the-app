@@ -11,6 +11,10 @@ def warName = "monolithic-shop.war"
 buildscript {
     repositories {
         mavenCentral()
+        maven {
+            url "http://dl.bintray.com/gesellix/gradle-plugins"
+        }
+        jcenter()
     }
     dependencies {
         //don't move this in root script or slf4j deps will be lost
