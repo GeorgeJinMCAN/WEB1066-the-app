@@ -1,10 +1,9 @@
 dist: trusty
 language: java
 jdk: oraclejdk9
-install:
-  #- "pip install -r requirements.txt"
+script:
   - ./gradlew clean jar
-
+  - echo "testing coming soon"
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
@@ -12,9 +11,6 @@ cache:
     - $HOME/.gradle/caches/modules-2/
     - $HOME/.gradle/wrapper/dists/
 
-script:
-  #- "./gradlew clean jar"
-  - echo "testing coming soon"
   # Run ANSIBLE checks
   # - ANSIBLE0008: Disabled for use of sudo warnings - to address
   # - ANSIBLE0011: Disabled for all tasks which should be named
