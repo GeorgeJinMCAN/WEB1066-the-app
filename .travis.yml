@@ -2,20 +2,12 @@ dist: trusty
 language: java
 jdk: oraclejdk9
 
-before_install:
-    - pwd
-    - ls -la
-    - chmod +x /.gradlew
-
-script:
+before_script:
   - ./gradlew clean jar
   - echo "testing coming soon"
-before_cache:
-  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
-cache:
-  directories:
-    - $HOME/.gradle/caches/modules-2/
-    - $HOME/.gradle/wrapper/dists/
+
+script:
+  - ./gradlew test
 
   # Run ANSIBLE checks
   # - ANSIBLE0008: Disabled for use of sudo warnings - to address
