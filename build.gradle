@@ -94,7 +94,7 @@ subprojects {
                         "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
                         "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion",
                         "com.github.stephenc.high-scale-lib:high-scale-lib:$stephecHighScaleVersion",
-                        "xml-apis:xml-apis:$xmlApisVersion",
+                        "xml-apis:xml-apis:1.3.04",
                         "junit:junit:$junitVersion",
                         "org.slf4j:slf4j-api:$slf4jVersion",
                         "ch.qos.logback:logback-classic:$logbackVersion",
