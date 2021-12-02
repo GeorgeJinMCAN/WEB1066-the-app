@@ -2,7 +2,7 @@ dist: trusty
 language: java
 jdk: oraclejdk9
 env:
-  - COVERAGE=$COVERAGE _VALUE ./gradlew test jacocoTestCoverageVerification
+  - COVERAGE=0.35 ./gradlew test jacocoTestCoverageVerification
 
 before_script:
   - ./gradlew clean jar
