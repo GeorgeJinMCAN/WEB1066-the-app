@@ -30,9 +30,10 @@ deploy:
     provider: script
     script:
       - echo 'WIP'
-      - bash -c "echo \"${DOCKER_PASSWORD}\" | docker login --username \"${DOCKER_LOGIN}\" --password-stdin"
+      - bash -c script/deploy.sh
     on:
-      all_branches: true
+      branch: master
+      condition: "$TEST_FOLDER=./monolithic/ui"
   # Run ANSIBLE checks
   # - ANSIBLE0008: Disabled for use of sudo warnings - to address
   # - ANSIBLE0011: Disabled for all tasks which should be named
